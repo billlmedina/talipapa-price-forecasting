@@ -21,6 +21,17 @@ The core of this project is a **weighted ensemble model** that combines the stre
 
 ---
 
+## Data Source
+The data used for this project is real-world price data from the Department of Agriculture's Bantay Presyo Program. This dataset serves as the foundation for the predictive model  and contains historical weekly prices for commodities monitored in Philippine wet markets.
+
+Using this operational dataset was a key challenge, as it required a robust preprocessing pipeline to handle:
+
+* Significant missing values (e.g., some commodities had over 50 missing data points).
+* Multi-stage interpolation (linear, cubic) to create a viable time series.
+* Resampling from a daily to a weekly frequency to stabilize the data for modeling.
+
+---
+
 ## Technology Stack
 
 * **Core Libraries:** Python 3.x, pandas, NumPy
